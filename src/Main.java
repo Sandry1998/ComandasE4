@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+       Pedido pedido1=new Pedido(1);
+       pedido1.agregarMenu(Menu.MENU2);
+       pedido1.agregarMenu(Menu.MENU3);
+       pedido1.imprimirMenu();
+
+        Pedido pedido2=new Pedido(5);
+        pedido2.agregarMenu(Menu.MENU5);
+        pedido2.agregarMenu(Menu.MENU1);
+        pedido2.imprimirMenu();
+
+        Pedido pedido3=new Pedido(10);
+        pedido3.agregarMenu(Menu.MENU4);
+        pedido3.agregarMenu(Menu.MENU3);
+        pedido3.imprimirMenu();
+
+
+        double total=pedido1.getSaldo()+pedido2.getSaldo()+pedido3.getSaldo()+pedido1.getSaldo()+pedido2.getSaldo()+pedido3.getSaldo();
+        System.out.println("\nTotal-> "+ total +"€");
+       System.out.println("*****GRACIAS POR VENIR*****");
+
     }
 }
